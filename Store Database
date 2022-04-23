@@ -1,0 +1,11 @@
+CREATE TABLE Walmart ('Aisle' INTEGER PRIMARY KEY, 'Item' TEXT, 'Price' NUMERIC, 'Units Sold' INTEGER, 'EBT Accepted' TEXT);
+
+INSERT INTO Walmart VALUES (1, 'Bread', 1.98, 7, 'YES');
+INSERT INTO Walmart VALUES (2, 'Milk', 2.32, 12, 'YES');
+INSERT INTO Walmart VALUES (3, 'Cucumber', 0.88, 3, 'YES');
+INSERT INTO Walmart VALUES (4, 'Laundry Detergent', 10.98, 5, 'NO');
+INSERT INTO Walmart VALUES (5, 'Dish Soap', 2.50, 6, 'NO');
+
+SELECT SUM(Price) FROM Walmart;
+SELECT Item FROM Walmart ORDER BY (Price);
+SELECT * FROM Walmart;
