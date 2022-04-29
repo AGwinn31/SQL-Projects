@@ -1,0 +1,30 @@
+CREATE TABLE writers (id INTEGER PRIMARY KEY AUTOINCREMENT, author TEXT);
+
+INSERT INTO writers (author) VALUES ("Stephen King");
+INSERT INTO writers (author) VALUES ("J.K. Rowling");
+INSERT INTO writers (author) VALUES ("Roald Dahl");
+INSERT INTO writers (author) VALUES ("Maya Angelou");
+INSERT INTO writers (author) VALUES ("Mark Twain");
+INSERT INTO writers (author) VALUES ("C.S. Lewis");
+
+CREATE TABLE books (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, author_id INTEGER);
+
+INSERT INTO books (title, author_id) VALUES ("Pet Cemetary", 1);
+INSERT INTO books (title, author_id) VALUES ("It", 1);
+INSERT INTO books (title, author_id) VALUES ("Th Shining", 1);
+INSERT INTO books (title, author_id) VALUES ("Misery", 1);
+INSERT INTO books (title, author_id) VALUES ("Harry Potter and the Sorcerer's Stone", 2);
+INSERT INTO books (title, author_id) VALUES ("Harry Potter and the Chamber of Secrets", 2);
+INSERT INTO books (title, author_id) VALUES ("Harry Potter and the Prisoner of Azkaban", 2);
+INSERT INTO books (title, author_id) VALUES ("Matilda", 3);
+INSERT INTO books (title, author_id) VALUES ("And Still I Rise", 4);
+INSERT INTO books (title, author_id) VALUES ("Orthodoxy", 5);
+INSERT INTO books (title, author_id) VALUES ("The Mysterious Stranger", 5);
+INSERT INTO books (title, author_id) VALUES ("The Great Divorce", 6);
+
+SELECT books.title, writers.author
+    FROM writers
+    JOIN books
+    ON writers.id = books.author_id;
+SELECT * FROM writers;
+SELECT * FROM books;
